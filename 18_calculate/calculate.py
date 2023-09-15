@@ -26,3 +26,15 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
         >>> calculate('foo', 2, 3)
         
     """
+    operation_map = {
+        'add': lambda a, b: a + b,
+        'subtract': lambda a, b: a - b,
+        'multiply': lambda a, b: a * b,
+        'divide': lambda a, b: a / b
+    }
+    if operation not in operation_map:
+        return None
+    result = operation_map[operation](a, b)
+    if make_int:
+        result = int(result)
+    return f"{message} {result}"

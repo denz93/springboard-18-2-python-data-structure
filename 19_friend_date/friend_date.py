@@ -1,4 +1,4 @@
-def friend_date(a, b):
+def friend_date(a: tuple, b: tuple):
     """Given two friends, do they have any hobbies in common?
 
     - a: friend #1, a tuple of (name, age, list-of-hobbies)
@@ -16,3 +16,4 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
+    return len(set(a[2]).intersection(set(b[2]))) > 0

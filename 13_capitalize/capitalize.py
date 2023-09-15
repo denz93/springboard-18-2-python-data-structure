@@ -1,4 +1,4 @@
-def capitalize(phrase):
+def capitalize(phrase:str):
     """Capitalize first letter of first word of phrase.
 
         >>> capitalize('python')
@@ -7,3 +7,4 @@ def capitalize(phrase):
         >>> capitalize('only first word')
         'Only first word'
     """
+    return phrase.replace(phrase[0], phrase[0].upper(), 1)
